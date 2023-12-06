@@ -1,0 +1,9 @@
+<!-- multimedia/templates/multimedia/upload_multimedia.html -->
+<h2>Upload image</h2>
+<form method="post" enctype="image/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+</form>
+<br>
+<a href="{% url 'image_list' %}">Back to image List</a>
