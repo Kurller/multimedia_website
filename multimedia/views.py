@@ -8,6 +8,7 @@ def image_list(request):
     context = {'images':images}
     return render(request, 'multimedia/image_list.html', context)
 
+
 def upload_image(request):
     if request.method == 'POST':
         form = ImageUploadForm(request.POST, request.FILES)
