@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-m8=pj63l&38efc+qj2x6#7osyi==rz4o=$87k+^s4esj#(@uoq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost',"multimedia-wmlu.onrender.com"]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost',"multimedia-3lgp.onrender.com"]
 
 
 # Application definition
