@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-
+import dj_database_url
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-m8=pj63l&38efc+qj2x6#7osyi==rz4o=$87k+^s4esj#(@uoq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -75,15 +75,15 @@ WSGI_APPLICATION = 'multimedia_website.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 #DATABASES = {
-   #"default": dj_database_url.parse("postgres://koladb_user:pKvcfJvVa41DTH0pUy1Y81R2JEK9ockc@dpg-clolh2p46foc73c7q00g-a.oregon-postgres.render.com/koladb")
+ #   'default': {
+  #      'ENGINE': 'django.db.backends.sqlite3',
+   #     'NAME': BASE_DIR / 'db.sqlite3',
+    #}
 #}
+DATABASES = {
+   "default": dj_database_url.parse("postgres://koladb_user:pKvcfJvVa41DTH0pUy1Y81R2JEK9ockc@dpg-clolh2p46foc73c7q00g-a.oregon-postgres.render.com/koladb")
+}
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
