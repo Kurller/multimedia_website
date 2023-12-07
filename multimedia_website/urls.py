@@ -7,7 +7,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(' ', include('multimedia.urls')),
+    path('images/', include('multimedia.urls')),
      path('upload/', include('multimedia.urls')),
 ]
 if settings.DEBUG:
